@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>社团招新智能匹配平台</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ============ LANDING PAGE ============ -->
+<div id="pg-landing" class="page active">
+  <header class="lhdr">
+    <div class="lbrand"><span>🎓</span>社团招新智能匹配平台</div>
+    <p class="ltag">AI 智能推荐 · 统一报名 · 高效招新</p>
+  </header>
+  <main class="lmain">
+    <div class="lwelcome">
+      <h2>请选择你的身份</h2>
+      <p>进入对应功能界面，体验完整产品流程</p>
+    </div>
+    <div class="role-cards">
+      <div class="role-card login-card" data-go="club">
+        <div class="login-badge">🔐 需登录</div>
+        <div class="rc-emoji">🏛️</div>
+        <h3>我是社团负责人</h3>
+        <ul>
+          <li>📣 发布招新计划，维护主页</li>
+          <li>👥 候选人管理，匹配度筛选</li>
+          <li>📊 招新数据看板，效果复盘</li>
+          <li>✉️ 批量通知，面试 / 录取跟进</li>
+        </ul>
+        <button class="btn fw login-enter-btn">登录进入 →</button>
+      </div>
+      <div class="role-card featured" data-go="student">
+        <div class="rc-emoji">🎒</div>
+        <h3>我是新生</h3>
+        <ul>
+          <li>📝 兴趣测评，AI 智能推荐</li>
+          <li>🏪 浏览社团广场，深入了解</li>
+          <li>📮 一键报名，实时跟踪进度</li>
+          <li>🔔 消息通知，进度透明可见</li>
+        </ul>
+        <button class="btn pri fw">进入新生端 →</button>
+      </div>
+      <div class="role-card login-card" data-go="admin">
+        <div class="login-badge">🔐 需登录</div>
+        <div class="rc-emoji">⚙️</div>
+        <h3>我是管理人员</h3>
+        <ul>
+          <li>🔍 社团审核，权限管理</li>
+          <li>📈 全局数据总览，趋势分析</li>
+          <li>📐 规则配置，推荐策略</li>
+          <li>🛡️ 风险监控，异常处理</li>
+        </ul>
+        <button class="btn fw login-enter-btn">登录进入 →</button>
+      </div>
+    </div>
+    <div class="lstats">
+      <div class="lstat"><b>48</b><span>个社团</span></div>
+      <div class="lstat"><b>1,240</b><span>新生参与</span></div>
+      <div class="lstat"><b>89%</b><span>匹配满意度</span></div>
+      <div class="lstat"><b>3.5<small>min</small></b><span>平均报名时长</span></div>
+    </div>
+  </main>
+</div>
+
+<!-- ============ STUDENT PORTAL ============ -->
+<div id="pg-student" class="page portal">
+  <header class="phdr">
+    <button class="backbtn" data-back>← 返回</button>
+    <div class="ptitle">🎒 新生端</div>
+    <div class="puser">张同学 <span class="rbadge">新生</span></div>
+  </header>
+  <div class="playout">
+    <aside class="pside">
+      <a class="snav active" data-tab="s-home">🏠 首页</a>
+      <a class="snav" data-tab="s-plaza">🏪 社团广场</a>
+      <a class="snav" data-tab="s-assess">📝 兴趣测评</a>
+      <a class="snav" data-tab="s-recommend">✨ 推荐结果</a>
+      <a class="snav" data-tab="s-detail">📋 社团详情</a>
+      <a class="snav" data-tab="s-apply">📮 一键报名</a>
+      <a class="snav" data-tab="s-myapply">👤 我的报名</a>
+      <a class="snav" data-tab="s-notify">🔔 消息通知 <span class="ndot" id="nDot">3</span></a>
+    </aside>
+    <main class="pcontent" id="sCon"></main>
+  </div>
+</div>
+
+<!-- ============ CLUB PORTAL ============ -->
+<div id="pg-club" class="page portal">
+  <header class="phdr">
+    <button class="backbtn" data-back>← 返回</button>
+    <div class="ptitle">🏛️ 社团端 · 摄影协会</div>
+    <div class="puser">李负责人 <span class="rbadge club">社团</span></div>
+  </header>
+  <div class="playout">
+    <aside class="pside">
+      <a class="snav active" data-tab="c-profile">🏠 社团主页</a>
+      <a class="snav" data-tab="c-publish">📣 招新发布</a>
+      <a class="snav" data-tab="c-candidates">👥 候选人管理</a>
+      <a class="snav" data-tab="c-dashboard">📊 数据看板</a>
+      <a class="snav" data-tab="c-notify">✉️ 通知发送</a>
+    </aside>
+    <main class="pcontent" id="cCon"></main>
+  </div>
+</div>
+
+<!-- ============ ADMIN PORTAL ============ -->
+<div id="pg-admin" class="page portal">
+  <header class="phdr">
+    <button class="backbtn" data-back>← 返回</button>
+    <div class="ptitle">⚙️ 管理端</div>
+    <div class="puser">王管理员 <span class="rbadge admin">管理员</span></div>
+  </header>
+  <div class="playout">
+    <aside class="pside">
+      <a class="snav active" data-tab="a-audit">🔍 社团审核 <span class="ndot">2</span></a>
+      <a class="snav" data-tab="a-perms">🔑 权限管理</a>
+      <a class="snav" data-tab="a-overview">📈 数据总览</a>
+      <a class="snav" data-tab="a-rules">📐 规则配置</a>
+      <a class="snav" data-tab="a-risk">🛡️ 风险监控</a>
+    </aside>
+    <main class="pcontent" id="aCon"></main>
+  </div>
+</div>
+
+<!-- 登录弹窗 -->
+<div id="loginModal" class="modal-overlay">
+  <div class="modal-box">
+    <div id="loginTitle" style="font-size:18px;font-weight:700;margin-bottom:6px">账号登录</div>
+    <div class="modal-sub" id="loginSub">请输入账号信息以继续</div>
+    <div class="field"><label>用户名</label><input id="loginUser" placeholder="请输入用户名"/></div>
+    <div class="field" style="margin-top:10px"><label>密码</label><input id="loginPass" type="password" placeholder="请输入密码"/></div>
+    <div id="loginErr" style="color:var(--danger);font-size:13px;min-height:18px;margin-top:6px"></div>
+    <div class="row" style="margin-top:14px;margin-bottom:0">
+      <button class="btn pri" id="loginSubmit" style="flex:1">登 录</button>
+      <button class="btn" id="loginCancel">取消</button>
+    </div>
+    <div class="modal-hint" id="loginHint"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
