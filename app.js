@@ -448,9 +448,12 @@ function showLoginModal(role) {
   $('loginHint').innerHTML        = hints[role] || '';
 
   // 姓名输入模式 vs 账号密码模式
-  $('loginPassRow').style.display = isStudent ? 'none' : '';
-  $('loginHint').style.display    = isStudent ? 'none' : '';
-  $('loginUserLabel').textContent = isStudent ? '你的姓名' : '用户名';
+  const passRow = $('loginPassRow');
+  if (passRow) passRow.style.display = isStudent ? 'none' : '';
+  const hintEl = $('loginHint');
+  if (hintEl) hintEl.style.display = isStudent ? 'none' : '';
+  const userLbl = $('loginUserLabel');
+  if (userLbl) userLbl.textContent = isStudent ? '你的姓名' : '用户名';
   $('loginUser').placeholder      = isStudent ? '请输入你的姓名（如：张三、李四）' : '请输入用户名';
   $('loginSubmit').textContent    = isStudent ? '进 入' : '登 录';
 

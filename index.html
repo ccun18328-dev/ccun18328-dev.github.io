@@ -70,7 +70,7 @@
   <header class="phdr">
     <button class="backbtn" data-back>← 返回</button>
     <div class="ptitle">🎒 新生端</div>
-    <div class="puser">张同学 <span class="rbadge">新生</span></div>
+    <div class="puser"><span id="studentUserName">张同学</span> <span class="rbadge">新生</span></div>
   </header>
   <div class="playout">
     <aside class="pside">
@@ -130,8 +130,8 @@
   <div class="modal-box">
     <div id="loginTitle" style="font-size:18px;font-weight:700;margin-bottom:6px">账号登录</div>
     <div class="modal-sub" id="loginSub">请输入账号信息以继续</div>
-    <div class="field"><label>用户名</label><input id="loginUser" placeholder="请输入用户名"/></div>
-    <div class="field" style="margin-top:10px"><label>密码</label><input id="loginPass" type="password" placeholder="请输入密码"/></div>
+    <div class="field"><label id="loginUserLabel">用户名</label><input id="loginUser" placeholder="请输入用户名"/></div>
+    <div class="field" id="loginPassRow" style="margin-top:10px"><label>密码</label><input id="loginPass" type="password" placeholder="请输入密码"/></div>
     <div id="loginErr" style="color:var(--danger);font-size:13px;min-height:18px;margin-top:6px"></div>
     <div class="row" style="margin-top:14px;margin-bottom:0">
       <button class="btn pri" id="loginSubmit" style="flex:1">登 录</button>
